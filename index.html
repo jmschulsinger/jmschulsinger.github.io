@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Head -->
 	<head>
 		<meta charset="UTF-8">
-		<title>Jordan</title>
-		<link rel="stylesheet" type="text/css" href="CSS/sample_Portfolio.css">
+		<title>Favorite Beers</title>
+		<link rel="stylesheet" type="text/css" href="css/portfolio.css">
 	</head>
 
-<!-- Body -->
 <body class="Background"> 
 
-<!-- Navbar -->
+<!-- Nav -->
 	<div class="Navbar">
 		<a class="active" href="#Home">Home</a> 
-		<a href="#About">About</a>
-		<a href="#GitHub">GitHub</a>
-		<a href="#Contact">Contact</a>
-	</div>
+		<a href="#IPA">IPA</a>
+		<a href="#Stout">Stout</a>
+        <a href="#Barleywine">Barleywine</a>
+        <a href="#Contact">Contact</a>
+    </div>
+    
 
 <!-- Home -->
 		<br> <!-- Breaks inserted to add space between navbar and first heading -->
@@ -26,70 +26,91 @@
 <!-- Video -->
 	<div id="Home">
 		<video autoplay muted loop id="Typing_Video"> <!-- Makes the video play automatically, on a loop and with no sound -->
-			<source src="CSS/Video/Typing.mp4" type="video/mp4">
+			<source src="css/video/Pouring.mp4" type="video/mp4">
 			Your browser does not support HTML5 video. <!-- Display message if video fails to run -->
 		</video>
 	</div>
 
 <!-- Video text --> 
 	<div class="Video_Text"> 
-		<h1 style="color:white;">Your Name's Portfolio</h1>
+		<h1 style="color: whitesmoke">Best Brews of the Week</h1>
 			<p> 
 				<strong>
 					<center>
-						<q>The computer programmer is a creator of universes for which he alone is the lawgiver.
-						<br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
-						<br>field of battle and to command such unswervingly dutiful actors or troops.
+						<q>Without question, the greatest invention in the history of mankind is beer. 
+						<br>Oh, I grant you that the wheel was also a fine invention,
+						<br>but the wheel does not go nearly as well with pizza.
 						</q>	
-						<br>-Joseph Weizenbaum<br>
+						<br><i>Dave Berry</i><br>
 						<br>
-						My name is ____. Welcome to my portfolio website. On it, I will tell you about my background and experience.<br>
-						<br>Thank you for stopping by and enjoy! 
+						My name is Jordan Schulsinger. Welcome to my beer blog, where I talk about my favoirte craft beers of the week. Ranging in a wide variety of styles. Come take a look!
 					</center>	
 				</strong>
 			</p> 
 	</div>
 
-<!-- About section -->
-	<div class="Row" id="About"> 
+<!-- IPA section -->
+	<div class="Row" id="IPA"> 
 		<div class="Column_2"> <!-- Left column -->
-			<img src="CSS/Images/Development.jpg" alt="Laptop">
+			<a href="https://kneedeepbrewing.com/" target="_blank"><<img src="css/images/IPA.jpeg" alt="IPA"></a>
 		</div>
   
 		<div class="Column_1"> <!-- Right column -->
-			<h1>About</h2>
-				<p>I am a software developer who loves to code! As a father of two, I enjoy time with my family and traveling. <br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br><br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!</p>
+            <h1>RU-Deep-2</h2>
+            <h2><center>Knee Deep Brewing Company</center></h2>
+            <h3><center><i>American Imperial IPA</i></center></h3>
+                <p>Beep bloop blop bleep boop. This IS the droid you are looking for! Coming in at 8.5% ABV and 51 IBUs, this double IPA has wonderful aromas of Meyer lemon, grapefruit and biscuit malt that lead into a dry finish.</a>
+                    RU-DEEP-2 is only available for a limited time ... it will be gone faster than an imperial starship making a jump into hyperspace.</p>
 		</div>
 	</div>
 
-<!-- GitHub section -->
-	<div class="Row" id="GitHub">
+<!-- STOUT section -->
+	<div class="Row" id="Stout">
 		<div class="Column_1"> <!-- Left column -->
-			<h1>GitHub</h1>
-				<p>You can view my coding projects on my GitHub profile here:<br>
-				<center><a href="https://github.com/the-tech-academy" target="_blank">The Tech Academy GitHub</a></center></p>
+			<h1>Speedway Stout - Hawaiian</h2>
+            <h2><center>AleSmith Brewing Company</center></h2>
+            <h3><center><i>American Imperial Stout</i></center></h3>
+                <p> Named after the region of Hawaii from which it hails, Ka'u is produced from some of the world's rarest coffee beans.
+                    Slow-grown beneficiaries of nutrient-rich volcanic soil and idyllic climate, Ka'u offers nuances of caramel and hazelnut plus a soft floral character, all of which marry seamlessly with natural sweetness from the vanilla and coconut as well as Speedway Stout's inherently rich, chocolaty character.
+                     Say aloha to something truly exceptional and evocative of its namesake isles.</p>
 		</div>
 		
 		<div class="Column_2"> <!-- Right column -->
-			<a href="https://github.com/the-tech-academy" target="_blank"><img src="CSS/Images/GitHub.png" alt="GitHub"></a>
+			<a href="http://alesmith.com/beers/hawaiianspeedway/" target="_blank"><img src="css/images/Stout.jpeg" alt="Stout"></a>
 		</div>
-	</div>
+    </div>
+    
+<!-- BARLEYWINE section -->
+<div class="Row" id="Barleywine"> 
+		<div class="Column_2"> <!-- Left column -->
+			<a href="https://eviltwin.dk/Freudian-Slip" target="_blank"><img src="css/images/Barleywine.jpeg" alt="Barleywine"></a>
+		</div>
+  
+		<div class="Column_1"> <!-- Right column -->
+            <h1>Freudian Slip</h2>
+            <h2><center>Evil Twin Brewing</center></h2>
+            <h3><center><i>American Barleywine</i></center></h3>
+                <p>Did you also at some point in your life get seduced by promising words like ‘probably (not) the best in the world’, ‘it (doesn’t really) work every time’ etc.
+                    This American Barley Wine says it how it is. It’s intense, attention seekingly hoppy and definitely your kind of beer. A beer with a big ego, drive and a huge thirst for recognition.</p>
+		</div>
+	</div>    
 
 <!-- Contact section -->
 	<div class="Row" id="Contact"> 
 		<div class="Column_3"> <!-- Contact image, left column -->
-			<img src="CSS/Images/Contact.jpg" alt="Contact_Image">
+			<img src="css/images/Variety.jpeg" alt="Contact">
 		</div>
 	
-		<div class="Column_1"> <!-- Contact form, right "column" -->
-			<h1>Contact</h2> 
+		<div class="Column_3"> <!-- Contact form, right "column" -->
+            <h1>Contact</h2>
+                <h2><center>Please reach out with any beer recomendations!</center></h2> 
 				<form action="" method="get"> <!-- This specifies where to send the form data and how; it is left blank -->
 					<label>Name:</label>
 						<input type="text" placeholder="Please enter your name here">
 					<label>Email:</label>
 						<input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-					<label>Message:</label>
-						<input type="text" id="Message" name="Message" placeholder="Please write your message here">
+					<label>Beer Recomendations:</label>
+						<input type="text" id="Beer" name="Message" placeholder="What's your favorite brew?">
 						<input type="submit" value="Submit">
 				</form>
 		</div>
@@ -98,7 +119,7 @@
 <!-- Footer section -->
 	<footer>
 		<p>
-			<center>&copy Prosper Consulting Inc.,  <a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
+			<center>&copy; Schulsinger Ventures  <a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
 		</p>
 	</footer>
 
