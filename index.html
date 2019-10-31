@@ -5,9 +5,20 @@
 		<meta charset="UTF-8">
 		<title>Favorite Beers</title>
 		<link rel="stylesheet" type="text/css" href="css/portfolio.css">
+		<script src="JS/portfolio.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	</head>
 
+<!-- Body -->
 <body class="Background"> 
+
+	<script> <!-- This script and function controls our fade in effect -->
+		document.body.className += ' fade-out';
+			$(function() {
+			$('body').removeClass('fade-out');
+			}
+		);
+	</script>
 
 <!-- Nav -->
 	<div class="Navbar">
@@ -15,16 +26,17 @@
 		<a href="#IPA">IPA</a>
 		<a href="#Stout">Stout</a>
         <a href="#Barleywine">Barleywine</a>
-        <a href="#Contact">Contact</a>
+        <a onclick="openForm()">Contact</a>
     </div>
     
+<div class="btn cancel" onclick="closeForm()">
 
 <!-- Home -->
+	<div id="Home">
 		<br> <!-- Breaks inserted to add space between navbar and first heading -->
 		<br>
 
 <!-- Video -->
-	<div id="Home">
 		<video autoplay muted loop id="Typing_Video"> <!-- Makes the video play automatically, on a loop and with no sound -->
 			<source src="css/video/Pouring.mp4" type="video/mp4">
 			Your browser does not support HTML5 video. <!-- Display message if video fails to run -->
@@ -43,11 +55,99 @@
 						</q>	
 						<br><i>Dave Berry</i><br>
 						<br>
-						My name is Jordan Schulsinger. Welcome to my beer blog, where I talk about my favoirte craft beers of the week. Ranging in a wide variety of styles. Come take a look!
+						My name is Jordan and welcome to my beer blog, where I talk about my favoirte craft beers of the week! Ranging in a wide variety of styles. Come take a look!
 					</center>	
 				</strong>
 			</p> 
 	</div>
+
+<!-- Slideshow section -->
+	<div id="Slideshow">
+		<div id="Slideshow_Background"> 
+		  <div id="Slideshow_Container">
+			
+			<div class="mySlides fade">
+			  <div class="Slide_Number">1 / 6</div>
+				<img class="Slide_Show_Images" src="./css/images/Variety.jpeg" style="width:100%">
+				  <div class="text">Take a look at some of my all time Favorite Beers!</div>
+			</div>
+			
+			<div class="mySlides fade">
+			  <div class="Slide_Number">2 / 6</div>
+				<img class="Slide_Show_Images" src="./css/images/Dunk.jpeg" style="width:100%">
+				  <div class="text">Double Dunk<br> American Imperial Stout<br>Praire Artisan Ales</div>
+			</div>
+	
+			<div class="mySlides fade">
+			  <div class="Slide_Number">3 / 6</div>
+				<img class="Slide_Show_Images" src="./css/images/falco.jpeg" style="width:100%">
+				  <div class="text">Falco<br> American IPA<br>Evil Twin</div>
+			</div>
+	
+			<div class="mySlides fade">
+			  <div class="Slide_Number">4 / 6</div>
+				<img class="Slide_Show_Images" src="./css/images/goose.jpeg" style="width:100%">
+				  <div class="text">Bourbon County Brand Barleywine Ale<br> British Barleywine<br>Goose Island Beer Co.</div>
+			</div>
+	
+			<div class="mySlides fade">
+			  <div class="Slide_Number">5 / 6</div>
+				<img class="Slide_Show_Images" src="./css/images/delirium.jpeg" style="width:100%">
+				  <div class="text">Delirium Nocturnum<br> Belgian Dark Strong Ale<br>Brouwerij Huyghe</div>
+				</div>
+	
+			<div class="mySlides fade">
+			  <div class="Slide_Number">6 / 6</div>
+				<img class="Slide_Show_Images" src="./css/images/thor.jpeg" style="width:100%">
+				  <div class="text"> 
+					<a onclick="openForm()" href="#Contact" style="color:white;">Recomend me one of our favoirte!</a>
+				  </div>
+			</div>
+		
+			  <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+			
+		  </div>
+	  <br>
+	
+		  <div style="text-align:center">
+	 
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+			<span class="dot" onclick="currentSlide(4)"></span> 
+			<span class="dot" onclick="currentSlide(5)"></span> 
+			<span class="dot" onclick="currentSlide(6)"></span> 
+	
+		  </div>
+		</div>
+	  </div>
+	  
+	  <script>
+			var slideIndex = 1;
+			  showSlides(slideIndex);
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";  
+				  }
+				  for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+		</script>
 
 <!-- IPA section -->
 	<div class="Row" id="IPA"> 
@@ -93,26 +193,28 @@
                 <p>Did you also at some point in your life get seduced by promising words like ‘probably (not) the best in the world’, ‘it (doesn’t really) work every time’ etc.
                     This American Barley Wine says it how it is. It’s intense, attention seekingly hoppy and definitely your kind of beer. A beer with a big ego, drive and a huge thirst for recognition.</p>
 		</div>
-	</div>    
+	</div>
+</div>
 
 <!-- Contact section -->
-	<div class="Row" id="Contact"> 
-		<div class="Column_3"> <!-- Contact image, left column -->
-			<img src="css/images/Variety.jpeg" alt="Contact">
-		</div>
-	
-		<div class="Column_3"> <!-- Contact form, right "column" -->
-            <h1>Contact</h2>
+	<div id="Contact">
+		<button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+		<div class="form-popup" id="myForm">
+			<form action="https://formspree.io/mzbpyrbp" method="POST" class="form-container">
+	            <h1>Contact</h2>
                 <h2><center>Please reach out with any beer recomendations!</center></h2> 
-				<form action="" method="get"> <!-- This specifies where to send the form data and how; it is left blank -->
-					<label>Name:</label>
-						<input type="text" placeholder="Please enter your name here">
-					<label>Email:</label>
-						<input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-					<label>Beer Recomendations:</label>
-						<input type="text" id="Beer" name="Message" placeholder="What's your favorite brew?">
-						<input type="submit" value="Submit">
-				</form>
+					<label for="name"><b>Name</b></label>
+			  			<input type="text" placeholder="Type your name here" name="name" required>
+					<label for="beer_recomendation"><b>Beer Recomendation</b></label>
+			  			<input type="text" placeholder="Tell me the name of the beer you think I should have featured" name="beer_recomendation" required>
+					<label for="email"><b>Email</b></label>		
+			  			<input type="text" placeholder="Type your email address here" name="email" required>
+					<label for="message"><b>Message</b></label>
+			  			<input type="text" placeholder="Tell me what you like most about this beer!" name="message">
+
+				<button type="submit" class="btn">SUBMIT</button>
+				<button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+			</form>
 		</div>
 	</div>
 	
@@ -123,6 +225,5 @@
 		</p>
 	</footer>
 
-		</body>
-
+</body>
 </html>
